@@ -3,7 +3,7 @@ const Roommate = require('../../models/roommate');
 
 controller.male = (req, res) => {
   Roommate
-  .findByGender(1)
+  .findByGender('Male')
   .then((data) => {
     res.json(data)
   })
@@ -12,7 +12,7 @@ controller.male = (req, res) => {
 
 controller.female = (req, res) => {
   Roommate
-  .findByGender(2)
+  .findByGender('Female')
   .then((data) => {
     res.json(data)
   })
@@ -21,7 +21,7 @@ controller.female = (req, res) => {
 
 controller.smoker = (req, res) => {
   Roommate
-  .findBySmoker(1)
+  .findBySmoker('Yes')
   .then((data) => {
     res.json(data)
   })
@@ -30,7 +30,7 @@ controller.smoker = (req, res) => {
 
 controller.rmDoesNotSmoke = (req, res) => {
   Roommate
-  .findBySmoker(2)
+  .findBySmoker('No')
   .then((data) => {
     res.json(data)
   })
@@ -39,7 +39,7 @@ controller.rmDoesNotSmoke = (req, res) => {
 
 controller.rmSleepsBefore10PM = (req, res) => {
   Roommate
-  .findBySleep(1)
+  .findBySleep('Before 10pm')
   .then((data) => {
     res.json(data)
   })
@@ -48,7 +48,7 @@ controller.rmSleepsBefore10PM = (req, res) => {
 
 controller.rmAge21to30 = (req, res) => {
   Roommate
-  .findByAge(1)
+  .findByAge('21 - 30')
   .then((data) => {
     res.json(data)
   })
@@ -57,7 +57,7 @@ controller.rmAge21to30 = (req, res) => {
 
 controller.rmAge31to40 = (req, res) => {
   Roommate
-  .findByAge(2)
+  .findByAge('31 - 40')
   .then((data) => {
     res.json(data)
   })
@@ -66,7 +66,7 @@ controller.rmAge31to40 = (req, res) => {
 
 controller.rmAge40plus = (req, res) => {
   Roommate
-  .findByAge(3)
+  .findByAge('41+')
   .then((data) => {
     res.json(data)
   })
