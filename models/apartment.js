@@ -7,11 +7,19 @@ Apartment.createApt = (apartment, latlong) => {
   // console.log('creating apartments', apartment)
   return db.one(`
     INSERT INTO apartments
-    (title, address, latlong, rent, description, photo, user_id)
+    (title,
+     email,
+     address,
+     latLong,
+     rent,
+     description,
+     photo, 
+     user_id)
     VALUES
-    ($1, $2, $3, $4, $5, $6, $7) RETURNING *
+    ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *
   `, [
     apartment.title,
+    apartment.email,
     apartment.address,
     latlong,
     apartment.rent,
