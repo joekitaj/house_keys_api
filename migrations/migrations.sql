@@ -18,7 +18,7 @@ CREATE TABLE apartments (
   title VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   address VARCHAR(255) NOT NULL,
-  latLong VARCHAR(255) NOT NULL,
+  latlong VARCHAR(255) NOT NULL,
   rent INTEGER,
   description VARCHAR(255) NOT NULL,
   photo VARCHAR(255) NOT NULL,
