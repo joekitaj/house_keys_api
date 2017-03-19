@@ -45,7 +45,7 @@ controller.female = (req, res) => {
 
 controller.rmDishesEveryMeal = (req, res) => {
   Roommate
-  .findByDishes('After every meal')
+  .findByDishes('After Every Meal')
   .then((data) => {
     res.json(data)
   })
@@ -144,7 +144,7 @@ controller.rent1501to2000 = (req, res) => {
 
 controller.rent2000Plus = (req, res) => {
   Roommate
-  .findByWallet('$2000 +')
+  .findByWallet('$2000+')
   .then((data) => {
     res.json(data)
   })
@@ -172,7 +172,6 @@ controller.rmSleepsBefore10PM = (req, res) => {
 
 controller.rmSleepAfterMidnight = (req, res) => {
   Roommate
-  .findByAge('21 - 30')
   .findBySleep('After Midnight')
   .then((data) => {
     res.json(data)
@@ -182,8 +181,6 @@ controller.rmSleepAfterMidnight = (req, res) => {
 
 controller.rmSleepsAround10PM = (req, res) => {
   Roommate
-  .findByAge('31 - 40')
-
   .findBySleep('Around 10pm')
   .then((data) => {
     res.json(data)
@@ -193,8 +190,7 @@ controller.rmSleepsAround10PM = (req, res) => {
 
 controller.rmAge21to30 = (req, res) => {
   Roommate
-  .findByAge('41+')
-  .findByAge('21 -30')
+  .findByAge('21 - 30')
   .then((data) => {
     res.json(data)
   })
@@ -212,7 +208,7 @@ controller.rmAge31to40 = (req, res) => {
 
 controller.rmAge40plus = (req, res) => {
   Roommate
-  .findByAge('41 +')
+  .findByAge('41+')
   .then((data) => {
     res.json(data)
   })
