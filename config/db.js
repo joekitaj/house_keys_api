@@ -2,7 +2,7 @@
 const pgp = require('pg-promise')();
 
 // Specifies database
-const db = pgp(connections);
+const db = pgp(connection);
 
 const connection = process.env.DATABASE_URL || 'postgress://localhost:5432/forum';
 
