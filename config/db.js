@@ -2,10 +2,8 @@
 const pgp = require('pg-promise')();
 
 // Specifies database
-const db = pgp({
-  host: 'localhost',
-  port: 5432,
-  database: 'house_keys'
-});
+const db = pgp(connections);
+
+const connection = process.env.DATABASE_URL || 'postgress://localhost:5432/forum';
 
 module.exports = db;
